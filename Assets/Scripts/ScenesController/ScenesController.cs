@@ -25,6 +25,6 @@ public class ScenesController : MonoBehaviour
 
     private void OnDestroy()
     {
-        _subscriptions.Dispose();
+        _subscriptions?.Dispose();
     }
 }
