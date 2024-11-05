@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using R3;
 
 namespace Assets.Scripts.Gameplay.Popup
 {
@@ -40,12 +41,12 @@ namespace Assets.Scripts.Gameplay.Popup
         }
         public void SetTimeLife(double second)
         {
-            //if (second > 0)
-            //{
-            //    _timerDisposable = Observable.Timer(TimeSpan.FromSeconds(second))
-            //     .Subscribe(_ => SetActive(false))
-            //     .AddTo(this);
-            //}
+            if (second > 0)
+            {
+                _timerDisposable = Observable.Timer(TimeSpan.FromSeconds(second))
+                 .Subscribe(_ => SetActive(false))
+                 .AddTo(this);
+            }
         }
         public void SetPosition(Vector3 position) => gameObject.transform.position = position;
 

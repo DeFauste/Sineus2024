@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-
+﻿using R3;
+using R3.Triggers;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Gameplay.Popup
@@ -55,11 +56,11 @@ namespace Assets.Scripts.Gameplay.Popup
 
         private void ObserveState(PopupNoUI popup)
         {
-           //popup.OnDisableAsObservable().Subscribe(
-           //    _ => { 
-           //        ReleasePopup(popup); 
-           //    }
-           //    ).AddTo(popup);
+           popup.OnDisableAsObservable().Subscribe(
+               _ => { 
+                   ReleasePopup(popup); 
+               }
+               ).AddTo(popup);
         }
 
         public void ReleasePopup(PopupNoUI popup)
