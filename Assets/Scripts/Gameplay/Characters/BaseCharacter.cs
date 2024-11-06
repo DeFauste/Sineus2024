@@ -13,11 +13,18 @@ namespace Assets.Scripts.Gameplay.Characters
         
         public void Attack(AttackData attack)
         {
-           int physical = BoostAttack(attack.PhysicalValue, attack.PhysicalElements);
-           int magic = BoostAttack(attack.MagicValue, attack.MagicElements);
+            float physical = BoostAttack(attack.PhysicalValue, attack.PhysicalElements);
+            float magic = BoostAttack(attack.MagicValue, attack.MagicElements);
+            float health = _characterData.Health;
+            health = health - physical;
+            health = health - magic;
+            if (health < 0)
+            {
+                Debug.Log("Герой умер");
+            }
         }
 
-        private int BoostAttack(int value, List<Elements> elements)
+        private float BoostAttack(float value, List<Elements> elements)
         {
             if(value <= 0) return 0;
             foreach(Elements element in elements)
@@ -28,7 +35,7 @@ namespace Assets.Scripts.Gameplay.Characters
             return value;
         }
 
-        private int BoostAttackValue(int value, Elements element)
+        private float BoostAttackValue(float value, Elements element)
         {
             switch(element)
             {

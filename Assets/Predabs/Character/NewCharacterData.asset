@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e6a9d4f6d7ce84d836f1db6158c168, type: 3}
+  m_Name: NewCharacterData
+  m_EditorClassIdentifier: 
+  Name: Name
+  Animation: {fileID: 9100000, guid: 89334eced8ad38748a8ee4246273aa58, type: 2}
+  Health: 1
+  ProtectPhysical: 1
+  ProtectMagic: 1
+  AccuracyPhysical: 1
+  AccuracyMagic: 1
+  StabilityFire: 1
+  StabilityEarth: 1
+  StabilityWater: 1
+  StabilityAir: 1
+  StabilityGrief: 1
+  StabilitySun: 1

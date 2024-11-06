@@ -1,20 +1,26 @@
-﻿namespace Assets.Scripts.Gameplay.Characters
+﻿using UnityEditor.Animations;
+using UnityEngine;
+
+namespace Assets.Scripts.Gameplay.Characters
 {
     /// <summary>
-    /// Все значения процентов указываются десятичным числом. К примеру 30% физ защиты  записываются как 0.3
+    /// Проценты указываем в виде десятичного числа => 0.3
     /// </summary>
-    public struct CharacterData
+    [CreateAssetMenu(fileName = "NewCharacterData", menuName = "Gameplay/CharacterData",order = 1)]
+    public class CharacterData : ScriptableObject
     {
-        public int Health; // здоровье персонажа
-        public int ProtectPhysical; // физическая защита % 
-        public int ProtectMagic; // магическая защита %
-        public int AccuracyPhysical; // точность физических атак %
-        public int AccuracyMagic ; // точность магических атак %
-        public int StabilityFire ; // устойчивость к огню %
-        public int StabilityEarth; // устойчивость к земле %
-        public int StabilityWater; // устойчивость к воде %
-        public int StabilityAir; // устойчивость к солнцу %
-        public int StabilityGrief; // устойчивость к скорби %
-        public int StabilitySun; // устойчивость к солнцу %
+        public string Name = "Name";
+        public RuntimeAnimatorController Animation;
+        public int Health = 1; // здоровье персонажа
+        public float ProtectPhysical = 1; // физическая защита % 
+        public float ProtectMagic = 1; // магическая защита %
+        public float AccuracyPhysical = 1; // точность физических атак %
+        public float AccuracyMagic = 1; // точность магических атак %
+        public float StabilityFire = 1; // устойчивость к огню %
+        public float StabilityEarth = 1; // устойчивость к земле %
+        public float StabilityWater = 1; // устойчивость к воде %
+        public float StabilityAir = 1; // устойчивость к солнцу %
+        public float StabilityGrief = 1; // устойчивость к скорби %
+        public float StabilitySun = 1; // устойчивость к солнцу %
     }
 }
