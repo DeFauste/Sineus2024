@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690199a182b25ab4a8fed8ed63c1da32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterData: {fileID: 11400000, guid: d2c69f3c670698d4693daaed8d4a6e19, type: 2}
+  CharacterData: {fileID: 11400000, guid: 6ea86017b4462e14f8f953a9e0d421dd, type: 2}
 --- !u!212 &1848577754
 SpriteRenderer:
   m_ObjectHideFlags: 0
