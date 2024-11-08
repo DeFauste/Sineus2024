@@ -1,5 +1,4 @@
-﻿using UnityEditor.Animations;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Gameplay.Characters
 {
@@ -12,15 +11,15 @@ namespace Assets.Scripts.Gameplay.Characters
         public string Name = "Name";
         public RuntimeAnimatorController Animation;
         public int Health = 1; // здоровье персонажа
-        public float ProtectPhysical = 1; // физическая защита % 
-        public float ProtectMagic = 1; // магическая защита %
-        public float AccuracyPhysical = 1; // точность физических атак %
-        public float AccuracyMagic = 1; // точность магических атак %
-        public float StabilityFire = 1; // устойчивость к огню %
-        public float StabilityEarth = 1; // устойчивость к земле %
-        public float StabilityWater = 1; // устойчивость к воде %
-        public float StabilityAir = 1; // устойчивость к солнцу %
-        public float StabilityGrief = 1; // устойчивость к скорби %
-        public float StabilitySun = 1; // устойчивость к солнцу %
+        public float ProtectPhysical = 0; // физическая защита % 
+        public float ProtectMagic = 0; // магическая защита %
+        public float AccuracyPhysical = 0; // точность физических атак %
+        public float AccuracyMagic = 0; // точность магических атак %
+        public float StabilityFire = 0; // устойчивость к огню %
+        public float StabilityEarth = 0; // устойчивость к земле %
+        public float StabilityWater = 0; // устойчивость к воде %
+        public float StabilityAir = 0; // устойчивость к солнцу %
+        public float StabilityGrief = 0; // устойчивость к скорби %
+        public float StabilitySun = 0; // устойчивость к солнцу %
     }
 }

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e6a9d4f6d7ce84d836f1db6158c168, type: 3}
+  m_Name: 3_FirostGigant
+  m_EditorClassIdentifier: 
+  Name: Warwar
+  Animation: {fileID: 9100000, guid: fe1cdda37cea8ee459fa586a247dabf2, type: 2}
+  Health: 100
+  ProtectPhysical: 0
+  ProtectMagic: 0
+  AccuracyPhysical: 0
+  AccuracyMagic: 0
+  StabilityFire: 0
+  StabilityEarth: 0
+  StabilityWater: 0
+  StabilityAir: 0
+  StabilityGrief: 0
+  StabilitySun: 0
