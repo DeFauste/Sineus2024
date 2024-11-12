@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Assets.Scripts.Gameplay.Card
 {
     [CreateAssetMenu(fileName = "NewRune", menuName = "Gameplay/Card", order = 1)]
-    public class Card : ScriptableObject
+    public class SOCard : ScriptableObject
     {
         public string Name = "Rune";
         public List<Elements> Elements;

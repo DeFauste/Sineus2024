@@ -6,17 +6,23 @@ namespace Assets.Scripts.Gameplay.Card
 {
     public class CardBinder : MonoBehaviour
     {
-        [SerializeField] private Card _card;
+        [SerializeField] private SOCard _card;
         [SerializeField] private Image _image;
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private TextMeshProUGUI _description;
-        public void SetCard(Card card) => _card = card;
-
+        private HoverEffect _howerEffect;
+        public void SetCard(SOCard card) => _card = card;
+        public SOCard GetCard() => _card;
+        private void Awake()
+        {
+            _howerEffect = GetComponent<HoverEffect>();
+        }
         private void Start()
         {
             UpdateCardView();
         }
 
+        public void IsInteract(bool isInteract) => _howerEffect.enabled = isInteract;
         public void UpdateCardView()
         {
             if(_card != null)

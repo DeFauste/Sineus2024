@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270a14cb83680b046965c1b1f4190c12, type: 3}
+  m_Script: {fileID: 11500000, guid: e2abc18c0fd5a464f9afae549b4f6ffc, type: 3}
   m_Name: Air
   m_EditorClassIdentifier: 
-  Name: Air
-  Elements: 03000000
-  Sprite: {fileID: 21300000, guid: 909a6dc57829a624dbc4fde44d7d81ee, type: 3}
+  Name: "\u0412\u043E\u0437\u0434\u0443\u0445"
+  Elements: 
+  Sprite: {fileID: 21300000, guid: 6077385d4fe7fba4c8840fcc6788f62d, type: 3}
   Description: Rune description

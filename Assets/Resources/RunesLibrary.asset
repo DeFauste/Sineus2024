@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2abc18c0fd5a464f9afae549b4f6ffc, type: 3}
-  m_Name: Fire
+  m_Script: {fileID: 11500000, guid: fcc5ce629cac6c94ab37578072227b40, type: 3}
+  m_Name: RunesLibrary
   m_EditorClassIdentifier: 
-  Name: "\u041E\u0433\u043E\u043D\u044C"
-  Elements: 
-  Sprite: {fileID: 21300000, guid: eff6cd0d0a87354459fd1e04269bf081, type: 3}
-  Description: Rune description
+  cards:
+  - {fileID: 11400000, guid: 9a3a4cbb15d1d3e439503fd76327c526, type: 2}
+  - {fileID: 11400000, guid: 22ec62eea3fe02241b4d6eb7f88c88dc, type: 2}
