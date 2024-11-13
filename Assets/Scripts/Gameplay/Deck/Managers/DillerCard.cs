@@ -12,7 +12,9 @@ namespace Assets.Scripts.Gameplay.Deck.Managers
         [SerializeField] private RectTransform parent;
         [SerializeField] private RectTransform _pointStartMove;
         private CardManager _cardManager;
-        private List<CardBinder> _cardPlayer = new ();
+        public List<CardBinder> _cardPlayer = new ();
+        public List<CardBinder> _cardPlayed = new ();
+        
         private void Awake()
         {
             var runeLib = Resources.Load<SOCardLibrary>("RunesLibrary");
