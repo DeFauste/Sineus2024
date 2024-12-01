@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts.Gameplay.Characters;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Gameplay.Card

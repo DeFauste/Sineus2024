@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4808402542455488800}
   - component: {fileID: 842029395260095431}
   - component: {fileID: 7491080658273863830}
+  - component: {fileID: 2361380000694094492}
   m_Layer: 0
   m_Name: PopupNoUI
   m_TagString: Untagged
@@ -109,8 +110,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278387668
+  m_fontColor: {r: 0.8301887, g: 0.011747932, b: 0.011747932, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -127,12 +128,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 50
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -185,3 +186,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tmp: {fileID: 842029395260095431}
+--- !u!210 &2361380000694094492
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137146984554661017}
+  m_Enabled: 1
+  m_SortingLayerID: -319785967
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   Name: "\u041E\u0433\u043E\u043D\u044C"
-  Elements: 
+  Elements: 02000000
   Sprite: {fileID: 21300000, guid: eff6cd0d0a87354459fd1e04269bf081, type: 3}
   Description: Rune description

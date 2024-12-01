@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.Gameplay.Deck.Moved
 {
+    /// <summary>
+    /// Место где расскладываются карты розыгрыша
+    /// </summary>
     public class PlayedPlace : DropPlace
     {
         [SerializeField] private DillerCard _dillerCard;

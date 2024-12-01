@@ -1,16 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts.Core.Services.Popup;
+using Assets.Scripts.Gameplay.Popup;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Gameplay.Characters
 {
     public class BaseCharacter: MonoBehaviour
     {
+        [SerializeField] private PopupService _popupManager;
+        [SerializeField] private CharacterData characterData;
+        [SerializeField] private Transform positionPopup;
         private CharacterData _characterData;
-        private BaseCharacter(CharacterData characterData)
+
+        private void Start()
         {
-            _characterData = characterData;
+            Init();
         }
-        
+
+        public void Init() 
+        {
+            _characterData = Instantiate(characterData);
+        }
         public void Attack(AttackData attack)
         {
             float physical = BoostAttack(attack.PhysicalValue, attack.PhysicalElements);
@@ -18,12 +28,18 @@ namespace Assets.Scripts.Gameplay.Characters
             float health = _characterData.Health;
             health = health - physical;
             health = health - magic;
-            if (health < 0)
+            if (health <= 0)
             {
                 Debug.Log("Герой умер");
             }
+            else
+            {
+                Debug.Log($"Жизни {health} Урон Ф {physical} Урон М {magic}");
+            }
+            _characterData.Health = (int)health;
+            _popupManager.Intarcat().CreatePopupPointMove((physical + magic).ToString(), positionPopup);
         }
-
+        
         private float BoostAttack(float value, List<Elements> elements)
         {
             if(value <= 0) return 0;

@@ -1,4 +1,5 @@
-﻿using R3;
+﻿using DG.Tweening;
+using R3;
 using R3.Triggers;
 using System.Collections.Generic;
 using UnityEngine;
@@ -70,6 +71,13 @@ namespace Assets.Scripts.Gameplay.Popup
             {
                 _popupStack.Push(popup);
             }
+        }
+        public void CreatePopupPointMove(string text, Transform transform)
+        {
+            var popup = GetPopup(text);
+            popup.transform.position = transform.position;
+            popup.transform.DOMove(new Vector3(transform.position.x, transform.position.y + 5f, transform.position.z), 2f)
+            .SetEase(Ease.Linear).OnComplete( () => ReleasePopup(popup));
         }
     }
 }

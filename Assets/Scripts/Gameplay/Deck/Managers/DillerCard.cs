@@ -3,37 +3,44 @@ using DG.Tweening;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static Assets.Scripts.Gameplay.LevelManager;
 
 namespace Assets.Scripts.Gameplay.Deck.Managers
 {
     public class DillerCard : MonoBehaviour
     {
+        [SerializeField] private LevelManager levelManager;
         [SerializeField] private CardBinder prefCard;
         [SerializeField] private RectTransform parent;
         [SerializeField] private RectTransform _pointStartMove;
         private CardManager _cardManager;
         public List<CardBinder> _cardPlayer = new ();
         public List<CardBinder> _cardPlayed = new ();
-        
+        [SerializeField] private int _maxValueCardPlayer = 4;
         private void Awake()
         {
             var runeLib = Resources.Load<SOCardLibrary>("RunesLibrary");
             _cardManager = new CardManager(runeLib);
+            levelManager.NextStep += TakeFullCard;
+
+        }
+        public void TakeFullCard(Step step)
+        {
+            if(step == Step.Player)
+            {
+                for (int i = 0; i < _maxValueCardPlayer; i++)
+                {
+                    TakeCard();
+                }
+            }
+
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyUp(KeyCode.D))
-            {
-                TakeCard();
-            }
-            if (Input.GetKeyUp(KeyCode.S))
-            {
-                DestroyCard();
-            }
-        }
+
         private void TakeCard()
         {
+            if(_cardPlayer.Count >= _maxValueCardPlayer) return;
+
            var card = _cardManager.GetRandomCard();
            var viewCard = Instantiate(prefCard, _pointStartMove, false);
            viewCard.SetCard(card);
@@ -50,11 +57,17 @@ namespace Assets.Scripts.Gameplay.Deck.Managers
             gameObject.transform.SetParent(rectTransform, false);
 
         }
-        private void DestroyCard()
+        public void DestroyCardPlaed()
         {
-            var c = _cardPlayer.First();
-            _cardPlayer.Remove(c);
-            Destroy(c.gameObject);
+            foreach(var card in _cardPlayed)
+            {
+                if (card != null)
+                {
+                    Destroy(card.gameObject);
+                }
+            }
+            _cardPlayed.Clear();
+
         }
     }
 }

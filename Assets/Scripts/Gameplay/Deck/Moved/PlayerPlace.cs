@@ -1,16 +1,13 @@
 ﻿using Assets.Scripts.Gameplay.Card;
 using Assets.Scripts.Gameplay.Deck.Managers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.Gameplay.Deck.Moved
 {
+    /// <summary>
+    /// Места где расскладываются карты игрока
+    /// </summary>
     public class PlayerPlace : DropPlace
     {
         [SerializeField] private DillerCard _dillerCard;
