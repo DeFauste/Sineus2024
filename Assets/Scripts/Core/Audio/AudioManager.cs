@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using Zenject;
 namespace Core.Audio
 {
     public class AudioManager : MonoBehaviour
@@ -7,6 +7,7 @@ namespace Core.Audio
         private AudioService _audioService;
 
         //Добавить Inject AudioSrvice
+        [Inject]
         public void Construct(AudioService audioSource)
         {
             _audioService = audioSource;

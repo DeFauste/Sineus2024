@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 namespace Core.Audio.Mixer
 {
     public class AudioMixerController
     {
-        private const string MasterVolumeParameter = "MasterVolume";
-        private const string MusicVolumeParameter = "MusicVolume";
-        private const string SfxVolumeParameter = "SfxVolume";
-        private const string UiVolumeParameter = "UiVolume";
+        private const string MasterVolumeParameter = "Master";
+        private const string MusicVolumeParameter = "Music";
+        private const string SfxVolumeParameter = "SFX";
 
         private readonly AudioMixer _audioMixer;
-
         public AudioMixerController(AudioMixer audioMixer)
         {
             _audioMixer = audioMixer;
         }
+
 
         public void SetMusicVolume(float volume)
         {
@@ -25,11 +25,6 @@ namespace Core.Audio.Mixer
         public void SetSfxVolume(float volume)
         {
             _audioMixer.SetFloat(SfxVolumeParameter, Mathf.Log10(volume) * 20);
-        }
-
-        public void SetUiVolume(float volume)
-        {
-            _audioMixer.SetFloat(UiVolumeParameter, Mathf.Log10(volume) * 20);
         }
 
         public void SetMasterVolume(float volume)
